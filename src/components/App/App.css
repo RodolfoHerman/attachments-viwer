@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.App-header {
+.App-container {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -11,6 +11,17 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.App-loader-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.7;
+  z-index: 998;
+  height: 100%;
+  width: 100%
 }
 
 .App-link {

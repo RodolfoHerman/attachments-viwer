@@ -3,16 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
-    "lodash": "^4.17.20",
+    "fontsource-roboto": "^4.0.0",
+    "halogenium": "^2.3.0",
     "pdfjs-dist": "^2.6.347",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-image-file-resizer": "^0.4.2",
-    "react-responsive-carousel": "^3.2.11",
+    "react-image-gallery": "^1.0.9",
     "react-scripts": "4.0.2",
+    "react-toastify": "^7.0.3",
+    "styled-components": "^5.2.1",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -38,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "worker-loader": "^3.0.2"
   }
 }

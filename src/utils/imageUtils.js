@@ -9,6 +9,8 @@ export const resize = (image) => new Promise(resolve => {
         60, 
         0,
         uri => { resolve(uri); },
-        'base64'
+        'base64',
+        800,
+        600
     );
 })

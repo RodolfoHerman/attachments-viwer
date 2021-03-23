@@ -1,10 +1,10 @@
 import { readFileData } from "./fileUtils";
-import pdfjs from "pdfjs-dist/webpack"
+import * as pdfjs from "pdfjs-dist/webpack";
 
 export const convertPdfToImage = async (file) => {
     const images = [];
     const canvas = document.createElement("canvas");
-    
+
     const data = await readFileData(file);
     const pdf = await pdfjs.getDocument(data).promise;
 
@@ -15,7 +15,7 @@ export const convertPdfToImage = async (file) => {
         canvas.height = viewport.height;
         canvas.width = viewport.width;
         await page.render({ canvasContext: context, viewport: viewport }).promise;
-        images.append(canvas.toDataURL());
+        images.push(canvas.toDataURL());
     }
     canvas.remove();
 
