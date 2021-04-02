@@ -176,21 +176,25 @@ const AttachmentsViwer = ({
         setShowDialog(false);
     }
 
+    const callToast = (message) => {
+        toast.warn(message, {
+            position: "top-center",
+            autoClose: 3500,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+        });
+    }
+
     useEffect(() => {
         setFiles(dataFiles.map(dataFile => dataFile.file));
     }, [dataFiles])
 
     useEffect(() => {
         if(invalidTypes) {
-            toast.warn(`Permitido os tipos de arquivos "${getAllowedFilesExtension()}".`, {
-                position: "top-center",
-                autoClose: 3500,
-                hideProgressBar: true,
-                closeOnClick: true,
-                pauseOnHover: false,
-                draggable: true,
-                progress: undefined,
-            });
+            callToast(`Permitido os tipos de arquivos "${getAllowedFilesExtension()}".`);
         }
 
         setInvalidTypes(false);
@@ -198,15 +202,7 @@ const AttachmentsViwer = ({
 
     useEffect(() => {
         if(invalidAmount) {
-            toast.warn(`Quantidade de arquivos permitidos: ${amountOfFiles}`, {
-                position: "top-center",
-                autoClose: 3500,
-                hideProgressBar: true,
-                closeOnClick: true,
-                pauseOnHover: false,
-                draggable: true,
-                progress: undefined,
-            });
+            callToast(`Quantidade de arquivos permitidos: ${amountOfFiles}`);
         }
 
         setInvalidAmount(false);
